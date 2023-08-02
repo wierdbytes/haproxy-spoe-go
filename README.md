@@ -83,7 +83,7 @@ func main() {
 		}, nil
 	})
 
-	if err := agent.ListenAndServe(":9000"); err != nil {
+	if err := agent.ListenAndServe("tcp", ":9000"); err != nil {
 		log.Fatal(err)
 	}
 }

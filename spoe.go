@@ -65,8 +65,8 @@ func NewWithConfig(h Handler, cfg Config) *Agent {
 	}
 }
 
-func (a *Agent) ListenAndServe(addr string) error {
-	lis, err := net.Listen("tcp", addr)
+func (a *Agent) ListenAndServe(proto, addr string) error {
+	lis, err := net.Listen(proto, addr)
 	if err != nil {
 		return errors.Wrap(err, "spoe")
 	}
