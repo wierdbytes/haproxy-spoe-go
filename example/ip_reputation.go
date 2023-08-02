@@ -6,7 +6,7 @@ import (
 
 	"log"
 
-	spoe "github.com/criteo/haproxy-spoe-go"
+	spoe "github.com/wierdbytes/haproxy-spoe-go"
 )
 
 func getReputation(ip net.IP) (float64, error) {
